@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    display: grid;
+    place-items: center;
+    background-image: url("../img/fondo/fondo1.jpg");
+}
+header{
+    width: 85%;
+    height: 95%;
+    border: 1px inset rgb(178, 117, 235);
+    display: flex;
+    flex-wrap: wrap;
+}
+header .menu, .canciones {
+    width: 25%;
+    height: 90%;
+    /*border: 1px solid white;*/
+    background: rgb(38, 37, 37); /*fondo izquierda*/
+   /*box-shadow: 3px 0px 4px rgb(178, 117, 235); /* sombra derecha*/
+    color: white;
+}
+header .canciones{
+    width: 75%;
+    background: rgb(38, 37, 37);/*fondo derecha*/
+}
+header .reproductor {
+    width: 100%;
+    height: 10%;
+    /*border: 1px solid white; */
+    background: rgb(38, 37, 37); /* fondo abajo*/
+    
+    /*box-shadow: 3px 6px 11px rgb(178, 117, 235); /* sombra abajo derecha e izquierda */
+}
+
+header .menu .playlist{
+    font-size: 20px;
+    margin: 15px 0px 0px 20px ;
+    font-weight: 500;
+}
+header .menu .playlistdiv{
+    margin: 40px 0px 0px 20px ;
+}
+header .menu .playlistdiv h4{
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: white; /* letra h4 (playlist, recomen....)*/
+    cursor: pointer; /*cambiador de cursor cuando pasas por encima*/
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+}
+header .menu .playlistdiv h4:hover{
+    color: rgb(178, 117, 235); /* color  letra cuando seleccionas*/
+}
+header .menu .playlistdiv h4 span{
+    position: relative;
+    margin-right: 35px;
+}
+header .menu .playlistdiv h4 span::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid white; /* color circulos izquierda de h4 */
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+header .menu .playlistdiv h4:hover span::before {
+    border: 2px solid rgb(178, 117, 235); /* color circulo cuando seleccionamos*/
+}
+header .menu .playlistdiv h4 .bi {
+    display: none;
+}
+header .menu .playlistdiv .active {
+    color: white; /* color final por defecto*/
+}
+
+header .menu .playlistdiv .active span {
+    display: none;
+}
+header .menu .playlistdiv .active .bi {
+    display: flex;
+    margin-right: 20px;
+}
+
+header .menu .menu_canciones {
+    width: 100%;
+    height: 420px;
+    /*border: 1px solid white;*/
+    margin-top: 15px;
+    overflow: auto;
+}
+header .menu .menu_canciones::-webkit-scrollbar {
+    display: none;
+}
+header .menu .menu_canciones li {
+    list-style-type: none;
+    position: relative;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .menu .menu_canciones li:hover {
+    background: rgba(124, 124, 124, 0.1); /* sombra del cuadrado donde se encuentra la lista */ 
+}
+header .menu .menu_canciones li span {
+    font-size: 12px;
+    font-weight: 600;
+    color: white; /* color del 01 y 02*/
+}
+header .menu .menu_canciones li img {
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+}
+header .menu .menu_canciones li h5 {
+    font-size: 11px;
+    margin-left: 15px;
+    width: 170px;
+    /*border: 1px solid white;*/
+    overflow: hidden;
+    /*text-overflow: ellipsis;*/
+    white-space: nowrap;
+}
+header .menu .menu_canciones li h5 .subtitulo{
+    font-size: 9px;
+    color: rgb(178, 117, 235); /* color nombre de autor*/
+}
+header .menu .menu_canciones li .bi{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+}
+
+/* 38:15*/
